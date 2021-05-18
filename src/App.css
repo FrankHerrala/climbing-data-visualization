@@ -2,37 +2,87 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Dashboard{
+  display: grid;
+  grid-template-columns: minmax(70%,70%) 1fr;
+  grid-template-rows: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.GenderDistribution{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.GenderDistribution p{
+  flex-grow: 1;
+  font-size: 20px;
+}
+
+.AdditionalInfo{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.AdditionalInfo #Grade{
+  flex-grow: 1;
+  font-size: 25px;
+  border-bottom: 5px solid black;
+}
+
+.PieChart {
+  flex-grow: 3;
+  width: 350px;
+  height: 350px;
+}
+
+.Buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.Buttons button {
+    font-family: monospace;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 1000;
+    background-color: #456268;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+    border: none;
+    width: 150px;
+    align-self: center;
+    transition: 0.5s;
+}
+
+.Buttons button:hover {
+    background-color: #79a3b1;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.Buttons button:focus {
+    outline: none;
+    background-color: orange;
+}
+
+#SelectedButton {
+  outline: none;
+  background-color: orange;
+  font-family: monospace;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 1000;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 10px;
+  margin: 5px;
+  border: none;
+  width: 150px;
+  align-self: center;
+  transition: 0.5s;
 }
